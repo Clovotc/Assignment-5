@@ -56,7 +56,8 @@ namespace Assignment_5.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Genre,Singer,Title,Price")] Song song)
+
+        public async Task<IActionResult> Create([Bind("Id,Title,Performer,Genre,Price")] Song song)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +89,8 @@ namespace Assignment_5.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Genre,Singer,Title,Price")] Song song)
+
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Performer,Genre,Price")] Song song)
         {
             if (id != song.Id)
             {
